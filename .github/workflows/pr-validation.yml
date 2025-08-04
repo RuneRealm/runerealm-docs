@@ -12,23 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the repository code
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      # Set up Node.js environment
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: "22"
-          cache: 'npm'
 
       # Install project dependencies
       - name: Install dependencies
         run: npm install
-
-      # Build project to validate it compiles successfully
-      - name: Build project
+      
+      # Build Project
+      - name: Build Project
         run: npm run build
 
       # Add a success message
