@@ -1,0 +1,101 @@
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.mediaCard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mediaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(129, 78, 51, 0.2);
+  border: 1px solid rgba(129, 78, 51, 0.4);
+}
+
+[data-theme='dark'] .mediaCard {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .mediaCard:hover {
+  box-shadow: 0 4px 14px rgba(129, 78, 51, 0.25);
+  border-color: rgba(129, 78, 51, 0.4);
+}
+
+.previewContainer {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: transparent;
+  background-size: 24px 24px;
+}
+
+.previewImage {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.mediaInfo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mediaCard:hover .mediaInfo {
+  opacity: 1;
+}
+
+.mediaInfo h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+.dimensions {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--ifm-font-family-monospace);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme='dark'] .mediaInfo {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .mediaInfo h3 {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .dimensions {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.formatButtons {
+  display: none;
+}

@@ -1,0 +1,103 @@
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.colorCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.colorCard:hover {
+  transform: translateY(-2px);
+}
+
+.colorSwatch {
+  height: 120px;
+  width: 100%;
+  background-image:
+    linear-gradient(45deg, #333 25%, transparent 25%),
+    linear-gradient(-45deg, #333 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #333 75%),
+    linear-gradient(-45deg, transparent 75%, #333 75%);
+  background-color: #1a1a1a;
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.colorInfo {
+  padding: 1rem;
+  color: white;
+}
+
+.colorInfo h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.hexButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.hexButton:hover {
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  border-color: #FFD700;
+}
+
+.copyIndicator {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  background-color: #333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.hexButton:hover .copyIndicator {
+  opacity: 1;
+  visibility: visible;
+}
+
+.description {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 480px) {
+  .colorInfo h3 {
+    font-size: 1rem;
+  }
+
+  .hexButton {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

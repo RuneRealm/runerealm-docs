@@ -1,0 +1,13 @@
+warvan:
+  name: Warvan
+  title: no title
+  # url: https://sebastienlorber.com
+  image_url: https://pbs.twimg.com/profile_images/1944322046139228160/QJ-EHB51_400x400.jpg
+  # page:
+  #   # customize the url of the author page at /blog/authors/<permalink>
+  #   permalink: '/all-sebastien-lorber-articles'
+  socials:
+    x: itswarvan
+    # linkedin: sebastienlorber
+    # github: slorber
+    # newsletter: https://thisweekinreact.com
