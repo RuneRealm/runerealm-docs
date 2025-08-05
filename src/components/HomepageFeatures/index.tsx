@@ -46,32 +46,26 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, emoji, description, link}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <Link to={link} className={styles.featureLink}>
-        <div className="text--center">
-          <div className={styles.featureEmoji} role="img" aria-label={title}>
-            {emoji}
-          </div>
+    <Link to={link} className={styles.featureLink}>
+      <div className="text--center">
+        <div className={styles.featureEmoji} role="img" aria-label={title}>
+          {emoji}
         </div>
-        <div className="text--center padding-horiz--md">
-          <Heading as="h3">{title}</Heading>
-          <p>{description}</p>
-        </div>
-      </Link>
-    </div>
+      </div>
+      <div className="text--center padding-horiz--md">
+        <Heading as="h3">{title}</Heading>
+        <p>{description}</p>
+      </div>
+    </Link>
   );
 }
 
 export default function HomepageFeatures(): ReactNode {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
+    <section className={clsx('container', styles.features)}>
+      {FeatureList.map((props) => (
+        <Feature key={props.title} {...props} />
+      ))}
     </section>
   );
 }

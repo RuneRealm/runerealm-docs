@@ -1,11 +1,11 @@
-import React, { JSX } from 'react';
+import React, { CSSProperties, JSX } from 'react';
 import styles from './FontDisplay.module.css';
 
 interface FontExample {
     name: string;
     family: string;
     weights: {
-        weight: string;
+        weight: CSSProperties['fontWeight'];
         name: string;
         sample: string;
     }[];
@@ -18,12 +18,12 @@ const fonts: FontExample[] = [
         family: 'Inter',
         weights: [
             {
-                weight: '600',
+                weight: 600,
                 name: 'Semi Bold',
                 sample: 'RuneRealm conquers realms of imagination'
             },
             {
-                weight: '400',
+                weight: 400,
                 name: 'Regular',
                 sample: 'RuneRealm conquers realms of imagination'
             }
@@ -35,12 +35,12 @@ const fonts: FontExample[] = [
         family: 'Roboto Condensed',
         weights: [
             {
-                weight: '300',
+                weight: 300,
                 name: 'Light',
                 sample: 'Dive into the RuneRealm and explore endlessly'
             },
             {
-                weight: '400',
+                weight: 400,
                 name: 'Regular',
                 sample: 'Dive into the RuneRealm and explore endlessly'
             }
@@ -70,8 +70,8 @@ export default function FontDisplay(): JSX.Element {
                                 <p
                                     className={styles.sampleText}
                                     style={{
-                                        fontFamily: font.family,
-                                        fontWeight: weight.weight as any
+                                        fontFamily: `${font.family}, sans-serif`,
+                                        fontWeight: weight.weight
                                     }}
                                 >
                                     {weight.sample}

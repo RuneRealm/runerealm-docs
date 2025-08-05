@@ -1,27 +1,32 @@
 .features {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   padding: 2rem 0;
   width: 100%;
 }
 
 .featureEmoji {
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
 .featureLink {
   text-decoration: none;
-  color: inherit;
+  color: var(--ifm-font-color-base);
   display: block;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all var(--ifm-transition-speed, 0.3s) ease;
+  background: var(--ifm-glass-bg, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--ifm-glass-border, rgba(255, 255, 255, 0.2));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
 .featureLink:hover {
-  text-decoration: none;
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.05);
-  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }

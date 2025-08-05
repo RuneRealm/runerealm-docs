@@ -1,22 +1,28 @@
 ---
-slug: coming-soon
-title: RuneRealm — Coming Soon
-description: coming soon
+slug: beta-is-live
+title: RuneRealm Beta Is Now Live!
+description: The gates are open! Join the RuneRealm Beta and be among the first to shape the world.
 authors: ['warvan']
 tags: [announcement]
-date: 2025-08-05
+date: 2024-10-26
 ---
 
-> _"Something magical is brewing..."_
+> _"The Realm has awakened. Your legend awaits."_
 
-RuneRealm is an upcoming project designed to reshape the gaming and fantasy experience. We're working behind the scenes to craft a realm filled with lore, challenges, and immersive gameplay powered by web technologies.
+The moment we've all been waiting for is here! We are thrilled to announce that the **RuneRealm Closed Beta is now officially live!**
 
-Stay tuned — the Realm awakens soon.
+This is your chance to be among the first adventurers to step into a new onchain universe, battle formidable foes, and provide crucial feedback that will shape the future of the game.
 
 <!-- truncate -->
 
 ---
 
-## 🔗 Stay Connected
+## ⚔️ What to Expect in the Beta
 
-_This is just the beginning._
+- **Core Gameplay:** Experience foundational mechanics including questing, combat, and looting.
+- **NFT Integration:** Test true ownership of your first in-game items.
+- **Community Events:** Participate in exclusive beta events and challenges for unique rewards.
+
+Your feedback is invaluable. [Join our Discord](https://discord.gg/arc-ao) to report bugs, share your thoughts, and connect with the development team and fellow players.
+
+The gates are open. **[Forge your legend!](/docs)**

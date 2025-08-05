@@ -94,6 +94,44 @@ const brandColors: ColorSwatch[] = [
     }
 ];
 
+interface ColorCardProps {
+    color: ColorSwatch;
+    copiedColor: string | null;
+    onCopy: (value: string) => void;
+}
+
+function ColorCard({ color, copiedColor, onCopy }: ColorCardProps) {
+    const displayColor = color.hex || color.rgba || color.gradient || '';
+
+    return (
+        <div className={styles.colorCard}>
+            <div className={styles.colorSwatch}>
+                <div
+                    style={{
+                        background: displayColor,
+                        width: '100%',
+                        height: '100%',
+                    }}
+                />
+            </div>
+            <div className={styles.colorInfo}>
+                <h3>{color.name}</h3>
+                {displayColor && (
+                    <button className={styles.hexButton} onClick={() => onCopy(displayColor)}>
+                        {displayColor}
+                        <span className={styles.copyIndicator}>
+                            {copiedColor === displayColor ? 'Copied!' : 'Click to copy'}
+                        </span>
+                    </button>
+                )}
+                {color.description && (
+                    <p className={styles.description}>{color.description}</p>
+                )}
+            </div>
+        </div>
+    );
+}
+
 export default function ColorPalette(): JSX.Element {
     const [copiedColor, setCopiedColor] = useState<string | null>(null);
 
@@ -105,39 +143,14 @@ export default function ColorPalette(): JSX.Element {
 
     return (
         <div className={styles.colorGrid}>
-            {brandColors.map((color) => {
-                const displayColor = color.hex || color.rgba || color.gradient || '';
-                return (
-                    <div key={color.name} className={styles.colorCard}>
-                        <div className={styles.colorSwatch}>
-                            <div
-                                style={{
-                                    background: displayColor,
-                                    width: '100%',
-                                    height: '100%'
-                                }}
-                            />
-                        </div>
-                        <div className={styles.colorInfo}>
-                            <h3>{color.name}</h3>
-                            {displayColor && (
-                                <button
-                                    className={styles.hexButton}
-                                    onClick={() => copyToClipboard(displayColor)}
-                                >
-                                    {displayColor}
-                                    <span className={styles.copyIndicator}>
-                                        {copiedColor === displayColor ? 'Copied!' : 'Click to copy'}
-                                    </span>
-                                </button>
-                            )}
-                            {color.description && (
-                                <p className={styles.description}>{color.description}</p>
-                            )}
-                        </div>
-                    </div>
-                );
-            })}
+            {brandColors.map((color) => (
+                <ColorCard
+                    key={color.name}
+                    color={color}
+                    copiedColor={copiedColor}
+                    onCopy={copyToClipboard}
+                />
+            ))}
         </div>
     );
 }

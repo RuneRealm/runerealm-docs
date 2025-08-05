@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import styles from './styles.module.css';
 import ColorPalette from './components/ColorPalette';
@@ -6,6 +6,19 @@ import FontDisplay from './components/FontDisplay';
 import MediaAssets from './components/MediaAssets';
 
 export default function MediaKit(): JSX.Element {
+
+
+    const DownloadButton = (): ReactNode => (
+        <a
+            href="/media-kit/media-kit.zip"
+            className={styles.downloadButton}
+            rel="noopener noreferrer"
+        >
+            Download Complete Kit {/** add icon here? */}
+        </a>
+    );
+
+
     return (
         <Layout
             title="Media Kit"
@@ -25,9 +38,7 @@ export default function MediaKit(): JSX.Element {
                         </li>
                     </ul>
                     <div className={styles.downloadSection}>
-                        <a href="/media-kit/runerealm-media-kit.zip" className={styles.downloadButton}>
-                            Download Complete Kit
-                        </a>
+                        <DownloadButton />
                     </div>
                 </aside>
 
@@ -39,9 +50,7 @@ export default function MediaKit(): JSX.Element {
                                 <p>Official brand assets and guidelines for RuneRealm</p>
                             </div>
                             <div className={styles.downloadSection}>
-                                <a href="/media-kit/runerealm-media-kit.zip" className={styles.downloadButton}>
-                                    Download Complete Kit
-                                </a>
+                                <DownloadButton />
                             </div>
                         </div>
                     </div>

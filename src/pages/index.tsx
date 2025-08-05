@@ -8,18 +8,20 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+type HomepageHeaderProps = {
+  title: string;
+  tagline: string;
+};
+
+function HomepageHeader({title, tagline}: HomepageHeaderProps) {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('glass-effect', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <Heading as="h1" className="hero__title">{title}</Heading>
+        <p className="hero__subtitle">{tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={clsx('button button--lg', styles.heroButton)}
             to="/docs">
             Start Here - 1min ⏱️
           </Link>
@@ -34,8 +36,9 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`Welcome to ${siteConfig.title}`}
-      description="Official documentation for RuneRealm - #1 Onchain MMORPG">
-      <HomepageHeader />
+      description="Official documentation for RuneRealm - #1 Onchain MMORPG"
+    >
+      <HomepageHeader title={siteConfig.title} tagline={siteConfig.tagline} />
       <main>
         <HomepageFeatures />
       </main>

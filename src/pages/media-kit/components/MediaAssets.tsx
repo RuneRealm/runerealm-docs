@@ -6,7 +6,7 @@ interface MediaAsset {
     preview: string;
     formats: {
         type: string;
-        url: string;
+        url: string; 
     }[];
     dimensions?: string;
     background?: 'light' | 'dark';
@@ -17,7 +17,7 @@ const mediaAssets: MediaAsset[] = [
         name: 'RuneRealm Logo',
         preview: '/media-kit/assets/runerealm-logo.png',
         formats: [
-            { type: 'PNG', url: '/media-kit/assets/runerealm-logo.png' }
+            { type: 'PNG', url: '/media-kit/assets/runerealm-logo.png' },
         ],
         dimensions: '2120x2120px'
     },
@@ -43,12 +43,9 @@ export default function MediaAssets(): JSX.Element {
     return (
         <div className={styles.mediaGrid}>
             {mediaAssets.map((asset) => (
-                <a
+                <div
                     key={asset.name}
-                    href={asset.formats[0].url}
-                    download
                     className={styles.mediaCard}
-                    title={`Download ${asset.name}`}
                 >
                     <div
                         className={`${styles.previewContainer} ${asset.background === 'dark' ? styles.darkBg : ''}`}
@@ -64,8 +61,20 @@ export default function MediaAssets(): JSX.Element {
                         {asset.dimensions && (
                             <span className={styles.dimensions}>{asset.dimensions}</span>
                         )}
+                        <div className={styles.formatLinks}>
+                            {asset.formats.map((format) => (
+                                <a
+                                    key={format.type}
+                                    href={format.url}
+                                    download
+                                    className={styles.formatButton}
+                                >
+                                    {format.type}
+                                </a>
+                            ))}
+                        </div>
                     </div>
-                </a>
+                </div>
             ))}
         </div>
     );
