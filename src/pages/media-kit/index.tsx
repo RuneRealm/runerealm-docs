@@ -1,7 +1,9 @@
-import React, { JSX } from 'react';
+import React from 'react';
 import Layout from '@theme/Layout';
 import styles from './styles.module.css';
-
+import ColorPalette from './components/ColorPalette';
+import FontDisplay from './components/FontDisplay';
+import MediaAssets from './components/MediaAssets';
 
 export default function MediaKit(): JSX.Element {
     return (
@@ -23,7 +25,7 @@ export default function MediaKit(): JSX.Element {
                         </li>
                     </ul>
                     <div className={styles.downloadSection}>
-                        <a href="" className={styles.downloadButton}>
+                        <a href="/media-kit/runerealm-media-kit.zip" className={styles.downloadButton}>
                             Download Complete Kit
                         </a>
                     </div>
@@ -37,7 +39,7 @@ export default function MediaKit(): JSX.Element {
                                 <p>Official brand assets and guidelines for RuneRealm</p>
                             </div>
                             <div className={styles.downloadSection}>
-                                <a href="" className={styles.downloadButton}>
+                                <a href="/media-kit/runerealm-media-kit.zip" className={styles.downloadButton}>
                                     Download Complete Kit
                                 </a>
                             </div>
@@ -46,14 +48,17 @@ export default function MediaKit(): JSX.Element {
 
                     <section id="media-assets" className={styles.section}>
                         <h2>Logos & Media Assets</h2>
+                        <MediaAssets />
                     </section>
 
                     <section id="color-palette" className={styles.section}>
                         <h2>Color Palette</h2>
+                        <ColorPalette />
                     </section>
 
                     <section id="typography" className={styles.section}>
                         <h2>Typography</h2>
+                        <FontDisplay />
                     </section>
                 </div>
             </main>
