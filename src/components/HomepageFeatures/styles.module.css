@@ -5,7 +5,23 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureEmoji {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.featureLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.featureLink:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
 }

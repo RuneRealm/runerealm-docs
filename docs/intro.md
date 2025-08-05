@@ -1,47 +1,69 @@
 ---
+title: Start Here
+description: The #1 Onchain MMORPG where players truly own their adventure.
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# 🛡️ Welcome to **RuneRealm**  
+## *The #1 Onchain MMORPG*
 
-Let's discover **Docusaurus in less than 5 minutes**.
+---
 
-## Getting Started
+> **"Forge your legend. Own your world."**
 
-Get started by **creating a new site**.
+RuneRealm is a **next-generation blockchain MMORPG** where players have **true ownership** over their in-game assets, characters, and destiny.  
+Experience a fantasy universe powered by Web3 — built **by gamers, for gamers**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+---
 
-### What you'll need
+## 🌐 A World Without Limits  
+From casual adventurers to hardcore raiders, RuneRealm unites a **global community** of gamers, creators, collectors, and guild leaders.  
+Together, we are shaping a player-governed universe where your choices and achievements **truly matter**.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+---
 
-## Generate a new site
+## 🔗 Powered by Blockchain  
+RuneRealm runs on secure, decentralized infrastructure to ensure:
 
-Generate a new Docusaurus site using the **classic template**.
+- ✅ Real ownership of all in-game items via NFTs  
+- 🔄 Player-to-player trading without intermediaries  
+- 🔒 Transparent, provably rare digital assets  
+- ♻️ Immutable game progress and history
 
-The classic template will automatically be added to your project after you run the command:
+---
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## ⚔️ What Makes RuneRealm Unique?
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- 🧙‍♂️ **True Ownership:** All items, loot, and characters are NFTs you control.
+- 🏹 **Epic PvP & PvE:** Compete in battle arenas or explore dungeons and defeat legendary bosses.
+- 🏛️ **Community Driven:** Join guilds, vote on decisions, and influence the world.
+- 💰 **Play-to-Earn:** Get rewarded for quests, events, and marketplace activity.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+---
 
-## Start your site
+## 🧭 Your Adventure Starts Here
 
-Run the development server:
+Whether you’re:
 
-```bash
-cd my-website
-npm run start
-```
+- ⚔️ A competitive gamer  
+- 🎨 A character designer or storyteller  
+- 🪙 A collector or trader  
+- 🏹 A guild strategist or leader  
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+**RuneRealm welcomes you.**  
+The journey ahead is vast — and it’s yours to shape.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+---
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## 📚 Explore More
+
+Check out these sections to begin your RuneRealm adventure:
+
+- [Media Kit](/media-kit) – Brand assets and partner resources  
+- [Game Info](/docs) – Learn how RuneRealm works and what's coming  
+- [News & Updates](/news) – Stay up to date with development and community news  
+
+---
+
+✨ **RuneRealm — Forge. Fight. Own.**
