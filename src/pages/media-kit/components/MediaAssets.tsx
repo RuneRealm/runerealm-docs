@@ -19,15 +19,7 @@ const mediaAssets: MediaAsset[] = [
         formats: [
             { type: 'PNG', url: '/media-kit/assets/runerealm-logo.png' },
         ],
-        dimensions: '2120x2120px'
-    },
-    {
-        name: 'RuneRealm Poster',
-        preview: '/media-kit/assets/runerealm-poster.png',
-        formats: [
-            { type: 'PNG', url: '/media-kit/assets/runerealm-poster.png' }
-        ],
-        dimensions: '4096x4096px'
+        dimensions: '2120x1080px'
     },
     {
         name: 'Eternal Pass',
@@ -36,6 +28,86 @@ const mediaAssets: MediaAsset[] = [
             { type: 'PNG', url: '/media-kit/assets/eternal-pass.png' }
         ],
         dimensions: '476x408px'
+    },
+    {
+        name: 'Background 1',
+        preview: '/media-kit/assets/bg1.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/bg1.png' }
+        ],
+        dimensions: '1536x1024px'
+    },
+    {
+        name: 'Background 2',
+        preview: '/media-kit/assets/bg2.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/bg2.png' }
+        ],
+        dimensions: '1792x1024px'
+    },
+    {
+        name: 'Aqua Guardians',
+        preview: '/media-kit/assets/aqua-guardians.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/aqua-guardians.png' }
+        ],
+        dimensions: '384x576px'
+    },
+    {
+        name: 'Inferno Blades',
+        preview: '/media-kit/assets/inferno-blades.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/inferno-blades.png' }
+        ],
+        dimensions: '384x576px'
+    },
+    {
+        name: 'Sky Nomads',
+        preview: '/media-kit/assets/sky-nomads.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/sky-nomads.png' }
+        ],
+        dimensions: '384x576px'
+    },
+    {
+        name: 'Stone Titans',
+        preview: '/media-kit/assets/stone-titans.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/stone-titans.png' }
+        ],
+        dimensions: '384x576px'
+    },
+    {
+        name: 'Air Berries',
+        preview: '/media-kit/assets/air-berries.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/air-berries.png' }
+        ],
+        dimensions: '128x128px'
+    },
+    {
+        name: 'Fire Berries',
+        preview: '/media-kit/assets/fire-berries.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/fire-berries.png' }
+        ],
+        dimensions: '128x128px'
+    },
+    {
+        name: 'Rock Berries',
+        preview: '/media-kit/assets/rock-berries.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/rock-berries.png' }
+        ],
+        dimensions: '128x128px'
+    },
+    {
+        name: 'Water Berries',
+        preview: '/media-kit/assets/water-berries.png',
+        formats: [
+            { type: 'PNG', url: '/media-kit/assets/water-berries.png' }
+        ],
+        dimensions: '128x128px'
     }
 ];
 
